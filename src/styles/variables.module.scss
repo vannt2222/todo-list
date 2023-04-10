@@ -1,0 +1,25 @@
+$primary-color: #e49393;
+$text-color: #f0f8ff;
+$while-color: #ffffff;
+$while-color-100: #ffe6c7;
+$while-color-200: #ffebb4;
+$icon-color: #798686;
+$pink-color: #ffbfa9;
+$brown-color: #4f200d;
+$brown-color-200: #a84448;
+$gray-color: rgba(0, 0, 0, 0.5);
+$cancel-color: rgba(0, 0, 0, 0.3);
+
+:export {
+  primaryColor: $primary-color;
+  textColor: $text-color;
+  whileColor: $while-color;
+  whileColor100: $while-color-100;
+  whileColor200: $while-color-200;
+  brownColor100: $brown-color;
+  brownColor200: $brown-color-200;
+  pinkColor100: $pink-color;
+  iconColor: $icon-color;
+  grayColor:$gray-color;
+  cancelColor: $cancel-color;
+}

@@ -1,0 +1,97 @@
+@use "variables.module.scss" as variables;
+.header {
+  @apply flex justify-around h-16 items-center shadow-md;
+  .icon {
+    @apply mr-2;
+  }
+}
+.form__item {
+  @apply w-full flex items-center;
+
+  & + & {
+    @apply mt-4;
+  }
+  &__label {
+    @apply w-[40%];
+  }
+  &__list {
+    @apply flex flex-col;
+    &__input {
+      @apply flex justify-center items-center;
+
+      & + & {
+        @apply mt-4;
+      }
+    }
+  }
+  &__input {
+    @apply w-full rounded-md h-9 border-gray-400 border-[0.5px] px-2 mr-2;
+  }
+}
+.form {
+  @apply w-[500px] rounded-3xl shadow-lg border-solid border-[0.5px] flex flex-col items-center justify-center p-5 absolute z-10 bg-slate-100 top-[25%] left-[30%];
+  transition: all 5s ease-in-out;
+  animation: popup 0.7s;
+  &__button {
+    @apply flex w-full justify-between mt-5;
+  }
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container {
+  @apply flex justify-between items-start mt-4;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background: variables.$gray-color;
+  transition: opacity 500ms;
+}
+.drop__area {
+  background: variables.$pink-color;
+  min-height: 200px;
+  margin: 5px;
+  padding-bottom: 20px;
+  width: 33%;
+  border-radius: 20px;
+  transition: all 0.5s;
+  text-align: center;
+  color: variables.$brown-color-200;
+  &:hover {
+    width: 36%;
+  }
+  &__title {
+    border-bottom: 1px solid;
+  }
+}
+.item__container {
+  padding: 10px;
+  background: variables.$while-color-100;
+  margin: 20px;
+  color: variables.$brown-color;
+  font-weight: 100;
+  cursor: move;
+  cursor: grab;
+  border-radius: 20px;
+  transition: background 0.4s;
+  &:hover {
+    background: variables.$while-color-200;
+  }
+  &__title {
+    @apply flex justify-between items-center;
+  }
+  &__description {
+    @apply text-left;
+  }
+}
